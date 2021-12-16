@@ -1,6 +1,7 @@
 :root {
     --bottom_color: #555;
     --download_button_border: 2px solid white;
+    --download_button_border_mobile: 6px solid white;
     --my_transition: 200ms linear;
 }
 
@@ -19,7 +20,6 @@ body {
 
 .bottom_div {
     background-color: var(--bottom_color);
-    padding: 10px;
     padding: 10px 20px 10px 20px;
 }
 
@@ -41,4 +41,29 @@ body {
     border-radius: 5px;
     color: black;
     transition: var(--my_transition);
+}
+
+@media screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+    .bottom_div {
+        background-color: var(--bottom_color);
+        padding: 30px 60px 30px 60px;
+    }
+    .bottom_button {
+        background-color: var(--bottom_color);
+        border: var(--download_button_border_mobile);
+        border-radius: 20px;
+        color: white;
+        font-size: 48px;
+        font-weight: bold;
+        padding: 15px 30px;
+        /*вертикаль горизонталь*/
+        transition: var(--my_transition);
+    }
+    .bottom_button:hover {
+        background-color: white;
+        border: var(--download_button_border_mobile);
+        border-radius: 20px;
+        color: black;
+        transition: var(--my_transition);
+    }
 }

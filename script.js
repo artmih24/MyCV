@@ -25,7 +25,7 @@ function ViewMyCV() {
 var mediaQuery = window.matchMedia("(max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2)");
 var bottomDiv = document.getElementById("bottom_div");
 
-let viewButtonHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button>';
+let viewButtonHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия в PDF</button>';
 let downloadButtonHTML = '<button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
 let spaceHTML = ' &nbsp; ';
 

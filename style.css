@@ -43,7 +43,7 @@ body {
     transition: var(--my_transition);
 }
 
-@media screen and (max-device-width: 812px) and (-webkit-min-device-pixel-ratio: 3) {
+@media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
     .bottom_div {
         background-color: var(--bottom_color);
         padding: 30px 60px 30px 60px;

@@ -25,10 +25,14 @@ function ViewMyCV() {
 var mediaQuery = window.matchMedia("(max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2)");
 var bottomDiv = document.getElementById("bottom_div");
 
+let viewButtonHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button>';
+let downloadButtonHTML = '<button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
+let spaceHTML = ' &nbsp; ';
+
 if (mediaQuery.matches) {
     console.log("mobile");
-    bottomDiv.innerHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button>';
+    bottomDiv.innerHTML = viewButtonHTML;
 } else {
     console.log("desktop");
-    bottomDiv.innerHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button> &nbsp; <button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
+    bottomDiv.innerHTML = viewButtonHTML + spaceHTML + downloadButtonHTML;
 }

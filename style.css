@@ -2,7 +2,7 @@
     --bottom_color: #555;
     --download_button_border: 2px solid white;
     --download_button_border_mobile: 4px solid white;
-    --my_transition: 200ms linear;
+    --my_transition: 100ms linear;
 }
 
 body {

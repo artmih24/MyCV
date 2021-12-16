@@ -30,5 +30,5 @@ if (mediaQuery.matches) {
     bottomDiv.innerHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button>';
 } else {
     console.log("desktop");
-    bottomDiv.innerHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button> &nbsp;<button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
+    bottomDiv.innerHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия PDF</button> &nbsp; <button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
 }

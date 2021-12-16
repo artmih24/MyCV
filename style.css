@@ -23,7 +23,7 @@ body {
     padding: 10px 20px 10px 20px;
 }
 
-.download_button {
+.bottom_button {
     background-color: var(--bottom_color);
     border: var(--download_button_border);
     border-radius: 5px;
@@ -35,7 +35,7 @@ body {
     transition: var(--my_transition);
 }
 
-.download_button:hover {
+.bottom_button:hover {
     background-color: white;
     border: var(--download_button_border);
     border-radius: 5px;

@@ -1,0 +1,44 @@
+:root {
+    --bottom_color: #555;
+    --download_button_border: 2px solid white;
+    --my_transition: 200ms linear;
+}
+
+body {
+    background: gray;
+    margin: 0;
+}
+
+.text_div {
+    background: white;
+    width: 800px;
+    margin: 50px auto 50px auto;
+    /*верх право низ лево*/
+    padding: 30px 50px 30px 50px;
+}
+
+.bottom_div {
+    background-color: var(--bottom_color);
+    padding: 10px;
+    padding: 10px 20px 10px 20px;
+}
+
+.download_button {
+    background-color: var(--bottom_color);
+    border: var(--download_button_border);
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 5px 10px;
+    /*вертикаль горизонталь*/
+    transition: var(--my_transition);
+}
+
+.download_button:hover {
+    background-color: white;
+    border: var(--download_button_border);
+    border-radius: 5px;
+    color: black;
+    transition: var(--my_transition);
+}

@@ -3,6 +3,7 @@
     --download_button_border: 2px solid white;
     --download_button_border_mobile: 4px solid white;
     --my_transition: 100ms linear;
+    --transparent: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -18,13 +19,17 @@ body {
     padding: 30px 50px 30px 50px;
 }
 
+#mail_link, #github_link {
+    color: blue;
+}
+
 .bottom_div {
     background-color: var(--bottom_color);
     padding: 10px 20px 10px 20px;
 }
 
 .bottom_button {
-    background-color: var(--bottom_color);
+    background-color: var(--transparent);
     border: var(--download_button_border);
     border-radius: 5px;
     color: white;

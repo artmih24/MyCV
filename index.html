@@ -8,8 +8,8 @@
     <script src="script.js" defer></script>
 </head>
 
-<body>
-    <div class="text_div">
+<body id="main_body">
+    <div class="text_div" id="text_div">
         <h3>Артем Быков, <text id="age_text">25 лет</text><br>Разработчик</h3>
         <br>
         <p>
@@ -17,7 +17,7 @@
             <br> Город проживания: Москва
             <br> +7 965 427-09-54
             <br>
-            <a href="mailto:artem.bykov2497@gmail.com">artem.bykov2497@gmail.com</a>
+            <a href="mailto:artem.bykov2497@gmail.com" id="mail_link">artem.bykov2497@gmail.com</a>
         </p>
         <br>
         <p>
@@ -25,7 +25,7 @@
             <ul>
                 <li align="justify">
                     Разработано несколько программных продуктов с применением различных библиотек (PyQt5, PyMongo и др.), например: редактор PDF, парсер Telegram-каналов, программа для рефакторинга кода на C/C++, чат на UDP-сокетах, клиент-серверные приложения и др. (ссылка
-                    на GitHub: <a href="https://github.com/artmih24">https://github.com/artmih24</a>),
+                    на GitHub: <a href="https://github.com/artmih24" id="github_link">https://github.com/artmih24</a>),
                 </li>
                 <li align="justify">
                     Разработано несколько мобильных приложений на ОС Android,
@@ -90,7 +90,8 @@
     </div>
     <div class="bottom_div" id="bottom_div">
         <button class="bottom_button" onclick="ViewMyCV()">Версия в PDF</button> &nbsp;
-        <button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>
+        <button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button> &nbsp;
+        <button class="bottom_button" id="change_theme_button" onclick="ChangeTheme()">Темная тема</button>
     </div>
 </body>
 

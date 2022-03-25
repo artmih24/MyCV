@@ -34,17 +34,19 @@ var bottomDiv = document.getElementById("bottom_div");
 let viewButtonHTML = '<button class="bottom_button" onclick="ViewMyCV()">Версия в PDF</button>';
 // кнопка скачивания
 let downloadButtonHTML = '<button class="bottom_button" onclick="DownloadMyCV()">Загрузить</button>';
+// кнопка смены темы
+let changeThemeButtonHTML = '<button class="bottom_button" id="change_theme_button" onclick="ChangeTheme()">Темная тема</button>';
 // пробел в HTML
 let spaceHTML = ' &nbsp; ';
 
 if (mediaQuery.matches) {
     // в мобильной версии
     console.log("Вы просматриваете резюме на мобильном устройстве");
-    bottomDiv.innerHTML = viewButtonHTML;
+    bottomDiv.innerHTML = viewButtonHTML + spaceHTML + changeThemeButtonHTML;
 } else {
     // в полной версии
     console.log("Вы просматриваете резюме на ПК");
-    bottomDiv.innerHTML = viewButtonHTML + spaceHTML + downloadButtonHTML;
+    bottomDiv.innerHTML = viewButtonHTML + spaceHTML + downloadButtonHTML + spaceHTML + changeThemeButtonHTML;
 }
 
 // дата моего рождения, номер месяца отсчитывается от 0
@@ -142,3 +144,30 @@ HTML_age_text.innerHTML = age_text;
 //         bottomDiv.style.position = "fixed";
 //     }
 // });
+
+var text_div = document.getElementById('text_div');
+var main_body = document.getElementById('main_body');
+var buttonTheme = document.getElementById('change_theme_button');
+var mail_link = document.getElementById('mail_link');
+var github_link = document.getElementById('github_link');
+
+function ChangeTheme() {
+    if (buttonTheme.textContent == "Темная тема") {
+        text_div.style.backgroundColor = "#333";
+        text_div.style.color = "white";
+        main_body.style.backgroundColor = "#222";
+        bottomDiv.style.backgroundColor = "#1A1A1A";
+        mail_link.style.color = "dodgerblue";
+        github_link.style.color = "dodgerblue";
+        buttonTheme.textContent = "Светлая тема";
+    } else if (buttonTheme.textContent == "Светлая тема") {
+        text_div.style.backgroundColor = "white";
+        text_div.style.color = "black";
+        main_body.style.backgroundColor = "gray";
+        bottomDiv.style.backgroundColor = "#555";
+        mail_link.style.color = "blue";
+        github_link.style.color = "blue";
+        buttonTheme.textContent = "Темная тема";
+    } else
+        alert("Что-то пошло не так");
+}

@@ -160,6 +160,7 @@ function ChangeTheme() {
         mail_link.style.color = "dodgerblue";
         github_link.style.color = "dodgerblue";
         buttonTheme.textContent = "Светлая тема";
+        document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#222');
     } else if (buttonTheme.textContent == "Светлая тема") {
         text_div.style.backgroundColor = "white";
         text_div.style.color = "black";
@@ -168,6 +169,7 @@ function ChangeTheme() {
         mail_link.style.color = "blue";
         github_link.style.color = "blue";
         buttonTheme.textContent = "Темная тема";
+        document.querySelector('meta[name="theme-color"]').setAttribute('content',  'gray');
     } else
         alert("Что-то пошло не так");
 }

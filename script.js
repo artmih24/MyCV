@@ -1,3 +1,5 @@
+console.log("Можете ознакомиться с кодом и разметкой данной веб-версии моего резюме");
+
 const download = (path, filename) => {
     // Create a new link
     const anchor = document.createElement('a');
@@ -37,13 +39,96 @@ let spaceHTML = ' &nbsp; ';
 
 if (mediaQuery.matches) {
     // в мобильной версии
-    console.log("mobile");
+    console.log("Вы просматриваете резюме на мобильном устройстве");
     bottomDiv.innerHTML = viewButtonHTML;
 } else {
     // в полной версии
-    console.log("desktop");
+    console.log("Вы просматриваете резюме на ПК");
     bottomDiv.innerHTML = viewButtonHTML + spaceHTML + downloadButtonHTML;
 }
+
+// дата моего рождения, номер месяца отсчитывается от 0
+const birthday = new Date(1997, 2, 24);
+// текущая дата
+var now = new Date();
+
+function secondsDiff(d1, d2) {
+    let millisecondDiff = d2 - d1;
+    let secDiff = Math.floor((d2 - d1) / 1000);
+    return secDiff;
+}
+
+function minutesDiff(d1, d2) {
+    let seconds = secondsDiff(d1, d2);
+    let minutesDiff = Math.floor(seconds / 60);
+    return minutesDiff;
+}
+
+function hoursDiff(d1, d2) {
+    let minutes = minutesDiff(d1, d2);
+    let hoursDiff = Math.floor(minutes / 60);
+    return hoursDiff;
+}
+
+function daysDiff(d1, d2) {
+    let hours = hoursDiff(d1, d2);
+    let daysDiff = Math.floor(hours / 24);
+    return daysDiff;
+}
+
+function weeksDiff(d1, d2) {
+    let days = daysDiff(d1, d2);
+    let weeksDiff = Math.floor(days / 7);
+    return weeksDiff;
+}
+
+function yearsDiff(d1, d2) {
+    let date1 = new Date(d1);
+    let date2 = new Date(d2);
+    let yearsDiff =  date2.getFullYear() - date1.getFullYear();
+    return yearsDiff;
+}
+
+function monthsDiff(d1, d2) {
+    let date1 = new Date(d1);
+    let date2 = new Date(d2);
+    let years = yearsDiff(d1, d2);
+    let months = (years * 12) + (date2.getMonth() - date1.getMonth()) ;
+    return months;
+}
+
+//var age = yearsDiff(birthday, now);
+
+// вычисляем разницу в миллисекундах
+// делим ее на 1000 (мс в секунде)
+// на 3600 (с в часе)
+// на 24 (часов в сутках)
+// на 365.25 (примерно суток в году)
+var age = Math.floor((now - birthday) / 1000 / 3600 / 24 / 365.25);
+
+//alert(age);
+
+var age_units = "лет";
+
+if (((age % 100) > 20) || ((age % 100) < 10)) {
+    if ((age % 10) == 1)
+        age_units = "год";
+    else if (((age % 10) >= 2) && ((age % 10) <= 4))
+        age_units = "года";
+    else if (((age % 10) >= 5) && ((age % 10) <= 9))
+        age_units = "лет";
+}
+else
+    age_units = "лет";
+
+age_text = age + " " + age_units;
+
+// участок текста для вывода даты
+var HTML_age_text = document.getElementById("age_text");
+
+HTML_age_text.innerHTML = age_text;
+
+//alert(age_text);
 
 // bottomDiv.style.position = "fixed";
 // bottomDiv.style.bottom = '0';

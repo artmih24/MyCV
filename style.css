@@ -52,7 +52,7 @@ body {
         padding: 30px 30px 30px 30px;
     }
     .bottom_button {
-        background-color: var(--bottom_color);
+        background-color: var(--transparent);
         border: var(--download_button_border_mobile);
         border-radius: 16px;
         color: white;

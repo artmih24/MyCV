@@ -49,8 +49,18 @@ if (mediaQuery.matches) {
     bottomDiv.innerHTML = viewButtonHTML + spaceHTML + downloadButtonHTML + spaceHTML + changeThemeButtonHTML;
 }
 
-// дата моего рождения, номер месяца отсчитывается от 0
-const birthday = new Date(1997, 2, 24);
+const encrypt = (text) => {
+    return CryptoJS.enc.Base64.stringify(CryptoJS.enc.Utf8.parse(text));
+};
+
+const decrypt = (data) => {
+    return CryptoJS.enc.Base64.parse(data).toString(CryptoJS.enc.Utf8);
+};
+
+//console.log(decrypt("MjQgTWFyY2ggMTk5Nw=="));
+
+// дата моего рождения (зашифрованная в base64)
+const birthday = new Date(decrypt("MjQgTWFyY2ggMTk5Nw=="));
 // текущая дата
 var now = new Date();
 

@@ -57,7 +57,25 @@ const decrypt = (data) => {
     return CryptoJS.enc.Base64.parse(data).toString(CryptoJS.enc.Utf8);
 };
 
-//console.log(decrypt("MjQgTWFyY2ggMTk5Nw=="));
+name_text = `${decrypt('0JDRgNGC0LXQvA==')} ${decrypt('0JHRi9C60L7Qsg==')}`;
+var HTML_name_text = document.getElementById("name_text");
+HTML_name_text.innerHTML = name_text;
+
+city_text = decrypt("0JzQvtGB0LrQstCw");
+var HTML_city_text = document.getElementById("city_text");
+HTML_city_text.innerHTML = city_text;
+
+phone_text = decrypt("KzcgOTY1IDQyNy0wOS01NA==");
+var HTML_phone_text = document.getElementById("phone_text");
+HTML_phone_text.innerHTML = phone_text;
+
+email_text = decrypt("YXJ0ZW0uYnlrb3YyNDk3QGdtYWlsLmNvbQ==");
+var HTML_email_text = document.getElementById("email_text");
+HTML_email_text.innerHTML = email_text;
+
+github_text = decrypt("aHR0cHM6Ly9naXRodWIuY29tL2FydG1paDI0");
+var HTML_github_text = document.getElementById("github_text");
+HTML_github_text.innerHTML = github_text;
 
 // дата моего рождения (зашифрованная в base64)
 const birthday = new Date(decrypt("MjQgTWFyY2ggMTk5Nw=="));

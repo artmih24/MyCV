@@ -11,7 +11,7 @@ body {
     margin: 0;
 }
 
-.text_div {
+div.text_div {
     background: white;
     width: 800px;
     margin: 50px auto 50px auto;
@@ -19,16 +19,17 @@ body {
     padding: 30px 50px 30px 50px;
 }
 
-#mail_link, #github_link {
+a#mail_link,
+a#github_link {
     color: blue;
 }
 
-.bottom_div {
+div.bottom_div {
     background-color: var(--bottom_color);
     padding: 10px 20px 10px 20px;
 }
 
-.bottom_button {
+div.bottom_div button.bottom_button {
     background-color: var(--transparent);
     border: var(--download_button_border);
     border-radius: 5px;
@@ -40,18 +41,18 @@ body {
     transition: var(--my_transition);
 }
 
-.bottom_button:hover {
+div.bottom_div button.bottom_button:hover {
     background-color: white;
     color: black;
     transition: var(--my_transition);
 }
 
 @media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
-    .bottom_div {
+    div.bottom_div {
         background-color: var(--bottom_color);
         padding: 30px 30px 30px 30px;
     }
-    .bottom_button {
+    div.bottom_div button.bottom_button {
         background-color: var(--transparent);
         border: var(--download_button_border_mobile);
         border-radius: 16px;
@@ -64,7 +65,7 @@ body {
         /*верх право низ лево*/
         transition: var(--my_transition);
     }
-    .bottom_button:hover {
+    div.bottom_div button.bottom_button:hover {
         background-color: white;
         color: black;
         transition: var(--my_transition);

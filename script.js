@@ -1,4 +1,14 @@
-console.log("Можете ознакомиться с кодом и разметкой данной веб-версии моего резюме");
+console.log("Здесь Вы можете ознакомиться с кодом и разметкой данной веб-версии моего резюме");
+
+function include(file, defer = false) {
+    var script = document.createElement('script');
+    script.src = file;
+    script.type = 'text/javascript';
+    script.defer = defer;
+    document.getElementsByTagName('head').item(0).appendChild(script);
+}
+
+include('https://cdnjs.cloudflare.com/ajax/libs/crypto-js/3.1.2/rollups/aes.js', defer = false);
 
 const download = (path, filename) => {
     // Create a new link
@@ -115,7 +125,7 @@ function weeksDiff(d1, d2) {
 function yearsDiff(d1, d2) {
     let date1 = new Date(d1);
     let date2 = new Date(d2);
-    let yearsDiff =  date2.getFullYear() - date1.getFullYear();
+    let yearsDiff = date2.getFullYear() - date1.getFullYear();
     return yearsDiff;
 }
 
@@ -123,7 +133,7 @@ function monthsDiff(d1, d2) {
     let date1 = new Date(d1);
     let date2 = new Date(d2);
     let years = yearsDiff(d1, d2);
-    let months = (years * 12) + (date2.getMonth() - date1.getMonth()) ;
+    let months = (years * 12) + (date2.getMonth() - date1.getMonth());
     return months;
 }
 
@@ -147,8 +157,7 @@ if (((age % 100) > 20) || ((age % 100) < 10)) {
         age_units = "года";
     else if (((age % 10) >= 5) && ((age % 10) <= 9))
         age_units = "лет";
-}
-else
+} else
     age_units = "лет";
 
 age_text = age + " " + age_units;
@@ -188,8 +197,8 @@ function ChangeTheme() {
         mail_link.style.color = "dodgerblue";
         github_link.style.color = "dodgerblue";
         buttonTheme.textContent = "Светлая тема";
-        document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#222222');
-        document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content',  '#222222');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#222222');
+        document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', '#222222');
     } else if (buttonTheme.textContent == "Светлая тема") {
         text_div.style.backgroundColor = "white";
         text_div.style.color = "black";
@@ -198,8 +207,8 @@ function ChangeTheme() {
         mail_link.style.color = "blue";
         github_link.style.color = "blue";
         buttonTheme.textContent = "Темная тема";
-        document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#808080');
-        document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content',  '#808080');
+        document.querySelector('meta[name="theme-color"]').setAttribute('content', '#808080');
+        document.querySelector('meta[name="apple-mobile-web-app-status-bar-style"]').setAttribute('content', '#808080');
     } else
         alert("Что-то пошло не так");
 }

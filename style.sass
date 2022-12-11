@@ -1,34 +1,30 @@
-:root {
+:root
     --bottom_color: #555
     --download_button_border: 2px solid white
     --download_button_border_mobile: 4px solid white
     --my_transition: 100ms linear
     --transparent: rgba(0, 0, 0, 0)
-}
 
-body {
+body
     background: gray
     margin: 0
-}
 
-div.text_div {
+div.text_div
     background: white
     width: 800px
     margin: 50px auto 50px auto
     /*верх право низ лево*/
     padding: 30px 50px 30px 50px
-}
 
 a#mail_link,
-a#github_link {
+a#github_link
     color: blue
-}
 
-div.bottom_div {
+div.bottom_div
     background-color: var(--bottom_color)
     padding: 10px 20px 10px 20px
 
-    button.bottom_button {
+    button.bottom_button
         background-color: var(--transparent)
         border: var(--download_button_border)
         border-radius: 5px
@@ -38,20 +34,16 @@ div.bottom_div {
         padding: 5px 10px
         /*вертикаль горизонталь*/
         transition: var(--my_transition)
-        &:hover {
+        &:hover
             background-color: white
             color: black
             transition: var(--my_transition)
-        }
-    }
 
-}
-
-@media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
-    div.bottom_div {
+@media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2)
+    div.bottom_div
         background-color: var(--bottom_color)
         padding: 30px 30px 30px 30px
-        button.bottom_button {
+        button.bottom_button
             background-color: var(--transparent)
             border: var(--download_button_border_mobile)
             border-radius: 16px
@@ -63,11 +55,7 @@ div.bottom_div {
             margin: 0 30px 0 0
             /*верх право низ лево*/
             transition: var(--my_transition)
-            &:hover {
+            &:hover
                 background-color: white
                 color: black
                 transition: var(--my_transition)
-            }
-        }
-    }
-}

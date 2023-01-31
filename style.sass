@@ -26,10 +26,11 @@ div.bottom_div
     button.bottom_button
         background-color: $transparent
         border: $download_button_border
-        border-radius: 5px
+            radius: 5px
         color: white
-        font-size: 14px
-        font-weight: bold
+        font:
+            size: 14px
+            weight: bold
         padding: 5px 10px
         /*вертикаль горизонталь*/
         transition: $my_transition
@@ -40,8 +41,9 @@ div.bottom_div
 
     a
         color: #c00
-        font-size: 14px
-        font-weight: bold
+        font:
+            size: 14px
+            weight: bold
 
 @media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2)
     div.bottom_div
@@ -50,10 +52,11 @@ div.bottom_div
         button.bottom_button
             background-color: $transparent
             border: $download_button_border_mobile
-            border-radius: 16px
+                radius: 16px
             color: white
-            font-size: 40px
-            font-weight: bold
+            font:
+                size: 40px
+                weight: bold
             padding: 15px 30px
             /*вертикаль горизонталь*/
             margin: 0 30px 0 0
@@ -65,5 +68,6 @@ div.bottom_div
                 transition: $my_transition
         a 
             color: #c00
-            font-size: 40px
-            font-weight: bold
+            font:
+                size: 40px
+                weight: bold

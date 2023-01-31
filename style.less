@@ -22,29 +22,41 @@ a#github_link {
     color: blue;
 }
 
+.bottom_button_default(@font_size) {
+    background-color: @transparent;
+    color: white;
+    font-weight: bold;
+    font-size: @font_size;
+    transition: @my_transition;
+}
+
+.bottom_button_hover {
+    background-color: white;
+    color: black;
+    transition: @my_transition;
+}
+
+.div_a(@font_size) {
+    color: #c00;
+    font-weight: bold;
+    font-size: @font_size;
+}
+
 div.bottom_div {
     background-color: @bottom_color;
     padding: 10px 20px 10px 20px;
     button.bottom_button {
-        background-color: @transparent;
+        .bottom_button_default(14px);
         border: @download_button_border;
         border-radius: 5px;
-        color: white;
-        font-size: 14px;
-        font-weight: bold;
         padding: 5px 10px;
         /*вертикаль горизонталь*/
-        transition: @my_transition;
         &:hover {
-            background-color: white;
-            color: black;
-            transition: @my_transition;
+            .bottom_button_hover();
         }
     }
     a {
-        color: #c00;
-        font-size: 14px;
-        font-weight: bold;
+        .div_a(14px);
     }
 }
 
@@ -53,27 +65,19 @@ div.bottom_div {
         background-color: @bottom_color;
         padding: 30px 30px 30px 30px;
         button.bottom_button {
-            background-color: @transparent;
+            .bottom_button_default(40px);
             border: @download_button_border_mobile;
             border-radius: 16px;
-            color: white;
-            font-size: 40px;
-            font-weight: bold;
             padding: 15px 30px;
             /*вертикаль горизонталь*/
             margin: 0 30px 0 0;
             /*верх право низ лево*/
-            transition: @my_transition;
             &:hover {
-                background-color: white;
-                color: black;
-                transition: @my_transition;
+                .bottom_button_hover();
             }
         }
         a {
-            color: #c00;
-            font-size: 40px;
-            font-weight: bold;
+            .div_a(40px);
         }
     }
 }

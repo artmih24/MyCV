@@ -23,10 +23,14 @@ a#github_link {
 }
 
 div.bottom_div {
-    background-color: $bottom_color;
+    background: {
+        color: $bottom_color;
+    }
     padding: 10px 20px 10px 20px;
     button.bottom_button {
-        background-color: $transparent;
+        background: {
+            color: $transparent
+        };
         border: $download_button_border {
             radius: 5px;
         }
@@ -39,7 +43,9 @@ div.bottom_div {
         /*вертикаль горизонталь*/
         transition: $my_transition;
         &:hover {
-            background-color: white;
+            background: {
+                color: white;
+            }
             color: black;
             transition: $my_transition;
         }
@@ -58,7 +64,9 @@ div.bottom_div {
         background-color: $bottom_color;
         padding: 30px 30px 30px 30px;
         button.bottom_button {
-            background-color: $transparent;
+            background: {
+                color: $transparent
+            };
             border: $download_button_border_mobile {
                 radius: 16px;
             }
@@ -73,7 +81,9 @@ div.bottom_div {
             /*верх право низ лево*/
             transition: $my_transition;
             &:hover {
-                background-color: white;
+                background: {
+                    color: white;
+                }
                 color: black;
                 transition: $my_transition;
             }

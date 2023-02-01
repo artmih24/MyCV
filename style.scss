@@ -38,18 +38,22 @@ a#github_link {
 }
 
 @mixin bottom_button_hover {
-    background: {
-        color: white;
+    &:hover {
+        background: {
+            color: white;
+        }
+        color: black;
+        transition: $my_transition;
     }
-    color: black;
-    transition: $my_transition;
 }
 
 @mixin div_a($font_size) {
-    color: #c00;
-    font: {
-        size: $font_size;
-        weight: bold;
+    a {
+        color: #c00;
+        font: {
+            size: $font_size;
+            weight: bold;
+        }
     }
 }
 
@@ -63,13 +67,9 @@ div.bottom_div {
         border: $download_button_border;
         padding: 5px 10px;
         /*вертикаль горизонталь*/
-        &:hover {
-            @include bottom_button_hover();
-        }
+        @include bottom_button_hover();
     }
-    a {
-        @include div_a($font_size: 14px);
-    }
+    @include div_a($font_size: 14px);
 }
 
 @media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -85,12 +85,8 @@ div.bottom_div {
             /*вертикаль горизонталь*/
             margin: 0 30px 0 0;
             /*верх право низ лево*/
-            &:hover {
-                @include bottom_button_hover();
-            }
+            @include bottom_button_hover();
         }
-        a {
-            @include div_a($font_size: 40px);
-        }
+        @include div_a($font_size: 40px);
     }
 }

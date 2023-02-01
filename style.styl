@@ -29,14 +29,16 @@ bottom_button_default(font_size)
     font-weight bold
 
 bottom_button_hover()
-    background-color white
-    color black
-    transition $my_transition
+    &:hover
+        background-color white
+        color black
+        transition $my_transition
 
 div_a(font_size)
-    color #c00
-    font-size font_size
-    font-weight bold
+    a 
+        color #c00
+        font-size font_size
+        font-weight bold
 
 div
     .bottom_div
@@ -49,10 +51,8 @@ div
                 border-radius 5px
                 padding 5px 10px
                 /*вертикаль горизонталь*/
-                &:hover
-                    bottom_button_hover()
-        a
-            div_a(14px)
+                bottom_button_hover()
+        div_a(14px)
 
 @media screen, (max-device-width: 896px), (-webkit-min-device-pixel-ratio: 2)
     div
@@ -68,7 +68,5 @@ div
                     /*вертикаль горизонталь*/
                     margin 0 30px 0 0
                     /*верх право низ лево*/
-                    &:hover
-                        bottom_button_hover()
-            a 
-                div_a(40px)
+                    bottom_button_hover()
+            div_a(40px)

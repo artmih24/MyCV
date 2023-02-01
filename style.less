@@ -31,15 +31,19 @@ a#github_link {
 }
 
 .bottom_button_hover {
-    background-color: white;
-    color: black;
-    transition: @my_transition;
+    &:hover {
+        background-color: white;
+        color: black;
+        transition: @my_transition;
+    }
 }
 
 .div_a(@font_size) {
-    color: #c00;
-    font-weight: bold;
-    font-size: @font_size;
+    a {
+        color: #c00;
+        font-weight: bold;
+        font-size: @font_size;
+    }
 }
 
 div.bottom_div {
@@ -51,13 +55,9 @@ div.bottom_div {
         border-radius: 5px;
         padding: 5px 10px;
         /*вертикаль горизонталь*/
-        &:hover {
-            .bottom_button_hover();
-        }
+        .bottom_button_hover();
     }
-    a {
-        .div_a(14px);
-    }
+    .div_a(14px);
 }
 
 @media screen and (max-device-width: 896px) and (-webkit-min-device-pixel-ratio: 2) {
@@ -72,12 +72,8 @@ div.bottom_div {
             /*вертикаль горизонталь*/
             margin: 0 30px 0 0;
             /*верх право низ лево*/
-            &:hover {
-                .bottom_button_hover();
-            }
+            .bottom_button_hover();
         }
-        a {
-            .div_a(40px);
-        }
+        .div_a(40px);
     }
 }
